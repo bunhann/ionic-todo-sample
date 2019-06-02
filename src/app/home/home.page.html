@@ -16,7 +16,7 @@
         <ion-label>
           {{ todo.title }}
         </ion-label>
-        <ion-checkbox [(ngModel)]="todo.completed"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="todo.completed" (ionChange)="updateTodo(todo)"></ion-checkbox>
       </ion-item>
     </ion-list>
   </div>

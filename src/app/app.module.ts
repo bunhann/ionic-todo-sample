@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {HttpClientModule } from '@angular/common/http';
-import { Network } from '@ionic-native/network/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,8 +18,8 @@ import { Network } from '@ionic-native/network/ngx';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule,
-    Network
+    HttpClientModule
+    
   ],
   providers: [
     StatusBar,

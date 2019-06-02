@@ -13,12 +13,21 @@ export class HomePage implements OnInit {
   private todos: Array<any>;
   constructor(
     private router: Router,
-    private network: Network,
     public todoService: TodoService
   ) {
     this.todos = this.todoService.getTodos();
   }
   ngOnInit(): void {
     
+  }
+
+  updateTodo(updateTodo) {
+    console.log("TODO-UPDATE", updateTodo);
+    let newValues = {
+      id: updateTodo.id,
+      title: updateTodo.title,
+      completed: updateTodo.completed
+    }
+    this.todoService.updateTodo(newValues);
   }
 }
